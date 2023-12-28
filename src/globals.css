@@ -1,0 +1,246 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-ExtraBold.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-Black.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+.hScreen {
+  min-height: calc(100vh - 130px) !important;
+}
+.founder strong {
+  font-weight: 800;
+}
+.videoHeight {
+  height: calc(100vh - 130px) !important;
+}
+/* target the active bullet */
+.slideShow .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: white;
+  opacity: 1;
+}
+.slideShow .swiper-pagination {
+  margin-bottom: 10px;
+}
+
+.testimonials .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: black;
+}
+.testimonials .swiper-pagination {
+  margin-bottom: 50px;
+}
+
+.testimonials .swiper-button-prev:after,
+.testimonials .swiper-button-next:after {
+  font-size: 15px;
+  color: black;
+  border: 1px solid black;
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials .swiper-button-prev:hover:after,
+.testimonials .swiper-button-next:hover:after {
+  background-color: black;
+  color: white;
+}
+
+.testimonials .swiper-button-prev {
+  margin-left: 40px;
+}
+.testimonials .swiper-button-next {
+  margin-right: 40px;
+}
+
+.products .swiper-button-prev:after,
+.products .swiper-button-next:after {
+  margin-bottom: 110px;
+}
+.products .swiper-slide.swiper-slide-active {
+  transform: scale(1.2); /* Increase the size of the centered slide */
+  z-index: 1;
+  transition-duration: 0.3s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.products .swiper-slide:not(.swiper-slide-active) {
+  transform: scale(0.9); /* Increase the size of the centered slide */
+  z-index: 0;
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.products .swiper-slide.swiper-slide-prev {
+  padding-left: 155px;
+}
+.products .swiper-slide.swiper-slide-next {
+  padding-right: 155px;
+}
+@media (max-width: 1300px) {
+  .products .swiper-slide.swiper-slide-prev {
+    padding-left: 20px;
+  }
+  .products .swiper-slide.swiper-slide-next {
+    padding-right: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .products .swiper-slide.swiper-slide-prev {
+    padding-left: 10px;
+  }
+  .products .swiper-slide.swiper-slide-next {
+    padding-right: 10px;
+  }
+}
+.products .swiper-slide.swiper-slide-active .addToBag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products .swiper-slide.swiper-slide-prev .addToBag,
+.products .swiper-slide.swiper-slide-next .addToBag {
+  display: none;
+}
+
+.productDetails .swiper-pagination-bullet {
+  border-radius: 12px;
+  height: 7px;
+  width: 62px;
+  background-color: black;
+  position: relative;
+}
+.productDetails .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: rgba(128, 128, 128, 0.5);
+}
+.productDetails
+  .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  content: "";
+  border-radius: 12px;
+  height: 100%;
+  background-color: black;
+  width: calc(var(--width, 0) * 1%);
+}
+
+@media (max-width: 768px) {
+  .testimonials .swiper-button-prev {
+    margin-left: 5px;
+  }
+  .testimonials .swiper-button-next {
+    margin-right: 5px;
+  }
+  .testimonials .swiper-pagination {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 640px) {
+  .products .swiper-button-prev:after,
+  .products .swiper-button-next:after {
+    margin-bottom: 140px;
+  }
+  .productDetails .swiper-pagination-bullet {
+    width: 30px;
+    height: 5px;
+  }
+}
+.vibrate {
+  animation: vibrate 2s infinite ease-in-out;
+}
+
+@keyframes vibrate {
+  0%,
+  7% {
+    transform: rotateZ(0deg);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%,
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@layer base {
+  html,
+  body {
+    @apply bg-bgColor font-[Poppins] scroll-smooth;
+  }
+  * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  *::-webkit-scrollbar {
+    width: 0px !important;
+    height: 4px !important;
+  }
+
+  /* Track */
+  *::-webkit-scrollbar-track {
+    background-color: #fff5ee !important;
+  }
+
+  /* Handle */
+  *::-webkit-scrollbar-thumb {
+    background-color: black !important;
+  }
+}
