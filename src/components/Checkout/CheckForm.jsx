@@ -436,7 +436,7 @@ const CheckForm = ({ ids, relevantKeys, setRelevantKeys }) => {
               <div className="flex space-x-2">
                 <input
                   type="text"
-                  placeholder="Prefix *"
+                  placeholder="Country Code *"
                   value={prefix_phone}
                   onChange={(e) => {
                     setPrefix_phone(e.target.value);
